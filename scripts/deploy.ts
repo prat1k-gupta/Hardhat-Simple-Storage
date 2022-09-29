@@ -1,5 +1,5 @@
 //imports
-const {ethers,run,network} = require("hardhat")
+import {ethers,run,network} from "hardhat"
 //api key etherscan PTX6EPAXZR4R9Y2ZMM1FEFZEAJW287JSB2
 //async main 
 
@@ -36,14 +36,14 @@ async function main(){
   console.log(`favorite number of ${name} is ${favNumber}`)
 }
 
-async function verify(contractAddress,args){
+async function verify(contractAddress: string,args: any[]){
   console.log("verifying contract...")
   try{
     await run("verify:verify",{
       address: contractAddress,
       constructorArguments: args,
     })
-  }catch(err){
+  }catch(err: any){
     if(err.message.toLowerCase().includes("already verified")){
       console.log("already verified")
     }else{

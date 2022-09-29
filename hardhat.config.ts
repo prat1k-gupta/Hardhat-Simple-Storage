@@ -1,9 +1,11 @@
-require("@nomicfoundation/hardhat-toolbox");
-require("@nomiclabs/hardhat-etherscan")
-require('dotenv').config(); 
-require("hardhat-gas-reporter")
-require("./tasks/block-number")
-require("solidity-coverage")
+import "@nomicfoundation/hardhat-toolbox"
+import "@nomiclabs/hardhat-etherscan"
+import 'dotenv/config' 
+import "hardhat-gas-reporter"
+import "./tasks/block-number"
+import "solidity-coverage"
+import "@nomiclabs/hardhat-ethers"
+import "@typechain/hardhat"
 /** @type import('hardhat/config').HardhatUserConfig */
 
 const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL || "https://eth-goerli"

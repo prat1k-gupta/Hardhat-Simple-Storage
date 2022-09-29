@@ -8,7 +8,7 @@ coverage
 coverage.json
 .prettierrc
 .prettierignore
-
+typehain-types
 #Hardhat files
 cache
 artifacts
